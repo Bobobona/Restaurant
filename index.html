@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resto</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>R</span>esto</a>
+        <ul class="navbar">
+            <li><a href="#">Accuiel</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">expert</a></li>
+            <li><a href="#">Temoignage</a></li>
+            <li><a href="#">contact</a></li>
+            <a href="#" class="btn-reserve">Reservation</a>
+        </ul>
+    </header>
+    <section class="banniere" id="banniere">
+        <div class="contenu">
+            <h2>Que des plats delicieux</h2>
+            <p>Ingo muronke ibifungurwa bimeze neza vyakanovera, murahasanga icicaro kimeze
+                neza ushobora kuyagiramwo.
+                ukeneye gutegura urubanza nakaryo keza ko kutugana tukabigufasha.
+                 Murakoze muhezagirwe mubanyu no muvyanyu.
+            </p>
+            <a href="#" class="btn1">Notre Menu</a>
+            <a href="#" class="btn2">Table de Reservation</a>
+        </div>
+    </section>
+    
+    <section class="apropos" id="apropos">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titre-texte"> <span>A</span> propos de nous</h2>
+                <P>Ingo muronke ibifungurwa bimeze neza vyakanovera, murahasanga icicaro kimeze
+                neza ushobora kuyagiramwo.
+                ukeneye gutegura urubanza nakaryo keza ko kutugana tukabigufasha.
+                 Murakoze muhezagirwe mubanyu no muvyanyu.</P>
+            </div>
+            <div>
+                <div class="col50">
+                    <img src="./image/apropos.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #1111;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 40px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;/*Range le header avec l'espace*/
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.logo{
+    color: rgb(12, 231, 66);
+    font-weight: bold; /*mettre les caractere en grand*/
+    font-size: 2em; /*Augmente les mesures des caracteres*/
+    text-decoration: none; /*enleve les ligne*/
+}
+
+.logo span{
+    color: #fb911f;
+}
+
+.navbar{
+    display: flex;/*Range les liens (a)*/
+    position: relative;
+}
+
+.navbar li{
+    list-style: none;/*enleve les point sur les liens(a)*/ 
+
+}
+
+.navbar a{
+    color: rgb(12, 231, 66);
+    text-decoration: none;/*enleve les ligne*/
+    margin-left: 20px; /*mettre l'espacement entre les lien (a)*/
+    font-weight: 900; /*mettre les caractere en grand*/
+    font-size: 20px;
+}
+
+.btn-reserve{
+    padding: 10px 20px;/*mettre en l'espacement gauche-droit, haut-bas*/
+    background: #fb911f;
+    margin-top: -10px;/*mettre en meme ligne*/
+    text-transform: uppercase; /*mettre en majuscule les caracteres*/
+    border-radius: 7px;
+}
+
+.btn-reserve:hover{
+    background: #121323; /*mettre autre back..*/
+    transition: ease-out;
+}
+
+header .navbar li a:hover{
+    color: #fb911f; /*mettre autre color*/
+    border-bottom: 2px solid #fb911f;
+
+}
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/banniere6.jpg);
+    background-size: cover; /*pour que l'element d'image couvre la totalite*/
+}
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+
+.banniere .contenu h2 {
+    color:#fff;
+    font-size: 3em; /*agrandir la taille*/
+    text-transform: capitalize;/*forme de texte lettre majuscul en debut de chacun*/
+
+}
+
+.contenu p{
+    color: rgb(167, 248, 217);
+    font-size: 1.5em;
+}
+
+.btn1{
+    font-size: 1.5em;
+    color: #fff;
+    background: #fb911f;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.btn2{
+    font-size: 1.5em;
+    color: #fff;
+    background: #2a4963;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.btn1:hover{
+    letter-spacing: 5px;/*Pour que les bouton soi bouge*/
+}
+
+section{
+    padding: 100px; /*c'est pour placer les contenu*/
+
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    display: flex; /* pour place a droite*/
+    justify-content: space-between;
+
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;/* distance entre les class*/
+}
+
+.titre-texte{
+    /* la forme du texte a propos */
+    color: #fb911f; 
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+
+
+
+
+    </style>
+</body>
+</html>
